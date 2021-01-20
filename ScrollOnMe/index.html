@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myDIV {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+    <P>Scroll On Me</P>
+
+
+<div id="myDIV">Deze tekst verandert als je erop scrolt!</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div onmousedown="WhichButton(event)">Er is nog een functie, probeer eens wat muisknoppen uit.
+    <p>1 = Linkermuisknop</p>
+    <p>2 = Middelmuisknop</p>
+    <p>3 = Rechtermuisknop</p>
+  </div>
+
+  <h2>Arrow Function</h2>
+
+<p>This example shows an Arrow Function without the brackets or the return keyword.</p>
+
+<p id="demo"></p>
+<a href="javascript:location.reload(true)">Reset</a>
+<script>
+function WhichButton(event) {
+  alert("You pressed button: " + event.which)
+}
+
+document.getElementById("myDIV").addEventListener("wheel", myFunction);
+
+function myFunction() {
+  this.style.fontSize = "50px";
+  this.style.color = "blue";
+}
+
+var hello;
+
+hello = () => "Hello World!";
+
+</script>
+
+</body>
+</html>
