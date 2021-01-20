@@ -12,8 +12,9 @@
 
         // Dit is de start function. Roep deze aan als alles is geladen
         let start = () => {
-            alleBlokjes = document.querySelectorAll("blokjes");
+            alleBlokjes = document.querySelectorAll("div.blokje--rood, div.blokje--blauw");
 
+        
             button1 = document.getElementById("blokje--rood");
             button1.addEventListener("click", maakRood);
 
@@ -22,16 +23,18 @@
         };
 
         let maakRood = () => {
-            for (let i = 0; i < alleBlokjes.length; i++) {
-                let ditBlokje = alleBlokjes[i];
-                ditBlokje.className = "blokje--rood";
+            for (let i = 1; i <= 5; i++) {
+                var div = document.getElementById(i.toString());
+                className = "blokje--rood";
+                div.className = className;
             }
         };
 
         let maakBlauw = () => {
-            for (let i = 0; i < alleBlokjes.length; i++) {
-                let ditBlokje = alleBlokjes[i];
-                ditBlokje.className = "blokje--blauw";
+            for (let i = 1; i <= 5; i++) {
+                var div = document.getElementById(i.toString());
+                className = "blokje--blauw";
+                div.className = className;
             }
         };
 
@@ -42,11 +45,11 @@
 
 <body>
     <section class="blokjes">
-        <div>Blokje 1</div>
-        <div>Blokje 2</div>
-        <div>Blokje 3</div>
-        <div>Blokje 4</div>
-        <div>Blokje 5</div>
+        <div class="1" id=1>Blokje 1</div>
+        <div class="2" id=2>Blokje 2</div>
+        <div class="3" id=3>Blokje 3</div>
+        <div class="4" id=4>Blokje 4</div>
+        <div class="5" id=5>Blokje 5</div>
     </section>
     <button id="blokje--rood">Maak alle blokjes rood</button>
     <button id="blokje--blauw">Maak alle blokjes blauw</button>
